@@ -14,7 +14,7 @@ wget --quiet -O postgresql.key https://www.postgresql.org/media/keys/ACCC4CF8.as
 && \
 apt-key add postgresql.key \
 && \
-rm postgresql.key
+rm postgresql.key \
 && \
 apt-get update && apt-get install -y --no-install-recommends \
 git-core \
