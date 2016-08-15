@@ -18,7 +18,7 @@ rm postgresql.key \
 && \
 apt-get update && apt-get install -y --no-install-recommends \
 git-core \
-build-essential \
+build-essential  \
 libssl-dev \
 libreadline-dev \
 libbz2-dev \
@@ -29,13 +29,15 @@ zlib1g-dev \
 libncurses5-dev \
 make \
 postgresql-9.5-postgis-2.2 \
-pgadmin3 \
 postgresql-contrib-9.5 \
 spatialite-bin \
 && \
 apt-get clean \
 && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# RUN apt-cache rdepends python
+# RUN apt-cache rdepends python-minimal
 
 RUN git clone git://github.com/yyuu/pyenv.git && \
 cd pyenv/plugins/python-build && \
