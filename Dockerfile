@@ -28,8 +28,29 @@ llvm \
 zlib1g-dev \
 libncurses5-dev \
 make \
+&& \
+apt-get clean \
+&& \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN \
+apt-get update && apt-get install -y --no-install-recommends \
 postgresql-9.5-postgis-2.2 \
+&& \
+apt-get clean \
+&& \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN \
+apt-get update && apt-get install -y --no-install-recommends \
 postgresql-contrib-9.5 \
+&& \
+apt-get clean \
+&& \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN \
+apt-get update && apt-get install -y --no-install-recommends \
 spatialite-bin \
 && \
 apt-get clean \
