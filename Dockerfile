@@ -1,7 +1,5 @@
 FROM debian:jessie
 
-ADD ./version /version
-
 RUN \
 apt-get update && apt-get install -y --no-install-recommends \
 wget \
