@@ -40,7 +40,8 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # RUN apt-rdepends -rp --state-follow=Installed --state-show=Installed python-minimal
 # RUN apt-cache rdepends python
 # RUN apt-cache rdepends python-minimal
-RUN apt-get uninstall --dry-run python
+RUN apt-get uninstall -y python
+RUN apt-get uninstall -y python-minimal
 
 RUN git clone git://github.com/yyuu/pyenv.git && \
 cd pyenv/plugins/python-build && \
