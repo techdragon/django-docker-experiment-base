@@ -32,7 +32,6 @@ postgresql-9.5-postgis-2.2 \
 pgadmin3 \
 postgresql-contrib-9.5 \
 spatialite-bin \
-libsqlite3-mod-spatialite \
 && \
 apt-get clean \
 && \
@@ -41,3 +40,5 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN git clone git://github.com/yyuu/pyenv.git && \
 cd pyenv/plugins/python-build && \
     ./install.sh
+
+# libsqlite3-mod-spatialite \
