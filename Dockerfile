@@ -10,7 +10,7 @@ ca-certificates \
 && \
 echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
 && \
-wget --quiet -O postgresql.key https://www.postgresql.org/media/keys/ACCC4CF8.as \
+wget -O postgresql.key https://www.postgresql.org/media/keys/ACCC4CF8.as \
 && \
 apt-key add postgresql.key \
 && \
