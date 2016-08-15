@@ -1,12 +1,14 @@
 FROM debian:jessie
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN \
 apt-get update && apt-get install -y --no-install-recommends \
 wget \
 curl \
 ca-certificates \
 && \
-"deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
+echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list \
 && \
 wget --quiet -O postgresql.key https://www.postgresql.org/media/keys/ACCC4CF8.as \
 && \
