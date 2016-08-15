@@ -40,5 +40,3 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN git clone git://github.com/yyuu/pyenv.git && \
 cd pyenv/plugins/python-build && \
     ./install.sh
-
-# libsqlite3-mod-spatialite \
