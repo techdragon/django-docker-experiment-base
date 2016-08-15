@@ -36,8 +36,8 @@ apt-get clean \
 && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# RUN apt-cache rdepends python
-# RUN apt-cache rdepends python-minimal
+RUN apt-cache rdepends python
+RUN apt-cache rdepends python-minimal
 
 RUN git clone git://github.com/yyuu/pyenv.git && \
 cd pyenv/plugins/python-build && \
