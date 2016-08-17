@@ -2,14 +2,7 @@ FROM debian:jessie
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN \
-echo "#! /bin/bash -e" > /usr/bin/clean-install && \
-echo "" >> /usr/bin/clean-install && \
-echo "apt-get update" >> /usr/bin/clean-install && \
-echo "apt-get install -y --no-install-recommends $@" >> /usr/bin/clean-install && \
-echo "apt-get clean" >> /usr/bin/clean-install && \
-echo "rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*" >> /usr/bin/clean-install && \
-chmod +x /usr/bin/clean-install
+ADD install-and-cleanup.sh /usr/bin/clean-install
 
 # #####
 # NOTES
